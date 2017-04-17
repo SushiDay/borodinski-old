@@ -385,8 +385,6 @@ input[type="text"] {
     
     border: 2px solid black;
     
-    text-transform: uppercase;
-    
     box-sizing: border-box;
 }
 
@@ -536,6 +534,25 @@ footer ul {
     background: #ffffff;
 }
 
+.pop-up button {
+    margin: 0;
+    padding: 0;
+    
+    content: " ";
+    
+    display: block;
+    
+    position: absolute;
+    
+    width: 25px;
+    height: 25px;
+    
+    top: 0;
+    right: -45px;
+    
+    background: url(../img/sprites-min.png) no-repeat 2px -138px;
+}
+
 .pop-up h2, .pop-up p {
     margin: 0;
 }
@@ -556,7 +573,7 @@ footer ul {
 }
 
 .pop-up input[type="text"], .pop-up input[type="password"] {
-    padding: 0;
+    padding: 9px 15px;
     margin: 0;
     
     outline: none;
@@ -567,6 +584,45 @@ footer ul {
     
     width: 300px;
     height: 44px;
+    
+    position: relative;
+}
+
+.pop-up .log::before {
+    display: block;
+    
+    content: "";
+    
+    position: absolute;
+    
+    width: 17px;
+    height: 17px;
+    
+    background: black;
+}
+
+input::-moz-placeholder {
+    color: black;
+    opacity: 1;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: black;
+}
+
+input::-webkit-input-placeholder { 
+    color: black;
+    opacity: 1;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.pop-up input[type="text"]:hover, .pop-up input[type="text"]:focus, .pop-up input[type="password"]:hover, .pop-up input[type="password"]:focus {
+    border: 2px solid #663d15;
 }
 
 .pop-up input[type="text"] {
